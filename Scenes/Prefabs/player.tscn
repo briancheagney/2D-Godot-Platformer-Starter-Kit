@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://w7m6tehvvy3g"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_qt7d6"]
+[ext_resource type="Script" uid="uid://by1niu0p84xve" path="res://Scripts/player.gd" id="1_qt7d6"]
 [ext_resource type="Texture2D" uid="uid://cbss87b7xk5lc" path="res://Assets/Spritesheet/platformerPack_character.png" id="2_q0cxm"]
 [ext_resource type="Texture2D" uid="uid://dxp77wq60c2rr" path="res://Assets/Textures/CloudTexture.png" id="3_8vxmb"]
 
@@ -12,11 +12,11 @@ region = Rect2(0, 0, 96, 96)
 atlas = ExtResource("2_q0cxm")
 region = Rect2(96, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cjvmv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1l4e"]
 atlas = ExtResource("2_q0cxm")
 region = Rect2(192, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k3yh2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ctox"]
 atlas = ExtResource("2_q0cxm")
 region = Rect2(288, 0, 96, 96)
 
@@ -40,10 +40,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cjvmv")
+"texture": SubResource("AtlasTexture_v1l4e")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k3yh2")
+"texture": SubResource("AtlasTexture_0ctox")
 }],
 "loop": true,
 "name": &"Walk",
@@ -69,6 +69,8 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 script = ExtResource("1_qt7d6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.5, 3.3941221)
+scale = Vector2(0.934, 1)
 sprite_frames = SubResource("SpriteFrames_4nss6")
 animation = &"Walk"
 
@@ -83,12 +85,13 @@ position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_tvbjh")
 
 [node name="ParticleTrails" type="CPUParticles2D" parent="."]
+visible = false
 position = Vector2(0, 42)
 emitting = false
 amount = 20
+texture = ExtResource("3_8vxmb")
 lifetime = 0.4
 speed_scale = 0.8
-texture = ExtResource("3_8vxmb")
 emission_shape = 1
 emission_sphere_radius = 5.0
 direction = Vector2(0, 0)
