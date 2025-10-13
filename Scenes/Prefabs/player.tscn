@@ -1,30 +1,59 @@
-[gd_scene load_steps=13 format=3 uid="uid://w7m6tehvvy3g"]
+[gd_scene load_steps=19 format=3 uid="uid://w7m6tehvvy3g"]
 
 [ext_resource type="Script" uid="uid://by1niu0p84xve" path="res://Scripts/player.gd" id="1_qt7d6"]
-[ext_resource type="Texture2D" uid="uid://cbss87b7xk5lc" path="res://Assets/Spritesheet/platformerPack_character.png" id="2_q0cxm"]
+[ext_resource type="Texture2D" uid="uid://8pu8b77cjr26" path="res://Assets/Spritesheet/PiggyWalk.png" id="2_v1l4e"]
 [ext_resource type="Texture2D" uid="uid://dxp77wq60c2rr" path="res://Assets/Textures/CloudTexture.png" id="3_8vxmb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_57bci"]
-atlas = ExtResource("2_q0cxm")
-region = Rect2(0, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y2um1"]
-atlas = ExtResource("2_q0cxm")
-region = Rect2(96, 0, 96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v1l4e"]
-atlas = ExtResource("2_q0cxm")
-region = Rect2(192, 0, 96, 96)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ctox"]
-atlas = ExtResource("2_q0cxm")
-region = Rect2(288, 0, 96, 96)
+atlas = ExtResource("2_v1l4e")
+region = Rect2(0, 88, 100, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb7df"]
+atlas = ExtResource("2_v1l4e")
+region = Rect2(100, 88, 100, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v34u6"]
+atlas = ExtResource("2_v1l4e")
+region = Rect2(0, 0, 100, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak25i"]
+atlas = ExtResource("2_v1l4e")
+region = Rect2(100, 0, 100, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdt7q"]
+atlas = ExtResource("2_v1l4e")
+region = Rect2(200, 0, 100, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7ict"]
+atlas = ExtResource("2_v1l4e")
+region = Rect2(0, 88, 100, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68wta"]
+atlas = ExtResource("2_v1l4e")
+region = Rect2(100, 88, 100, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8ttq"]
+atlas = ExtResource("2_v1l4e")
+region = Rect2(200, 88, 100, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofsyp"]
+atlas = ExtResource("2_v1l4e")
+region = Rect2(0, 176, 100, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhr4y"]
+atlas = ExtResource("2_v1l4e")
+region = Rect2(100, 176, 100, 88)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4nss6"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"Death01",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_57bci")
+"texture": SubResource("AtlasTexture_0ctox")
 }],
 "loop": true,
 "name": &"Idle",
@@ -32,7 +61,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y2um1")
+"texture": SubResource("AtlasTexture_cb7df")
 }],
 "loop": true,
 "name": &"Jump",
@@ -40,14 +69,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v1l4e")
+"texture": SubResource("AtlasTexture_v34u6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0ctox")
+"texture": SubResource("AtlasTexture_ak25i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdt7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7ict")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68wta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8ttq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofsyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhr4y")
 }],
 "loop": true,
 "name": &"Walk",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4sts"]
@@ -73,6 +120,8 @@ position = Vector2(-0.5, 3.3941221)
 scale = Vector2(0.934, 1)
 sprite_frames = SubResource("SpriteFrames_4nss6")
 animation = &"Walk"
+frame = 6
+frame_progress = 0.6276439
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 15)
@@ -85,7 +134,6 @@ position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_tvbjh")
 
 [node name="ParticleTrails" type="CPUParticles2D" parent="."]
-visible = false
 position = Vector2(0, 42)
 emitting = false
 amount = 20
