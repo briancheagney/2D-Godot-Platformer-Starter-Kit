@@ -119,7 +119,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk",
-"speed": 12.0
+"speed": 7.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4sts"]
@@ -143,7 +143,6 @@ script = ExtResource("1_qt7d6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4nss6")
 animation = &"Walk"
-frame_progress = 0.99338317
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 31)
