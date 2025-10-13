@@ -5,12 +5,12 @@ extends CharacterBody2D
 @export_category("Player Properties") # You can tweak these changes according to your likings
 @export var move_speed : float = 400
 @export var jump_force : float = 600
-@export var gravity : float = 30
-@export var max_jump_count : int = 2
-var jump_count : int = 2
+@export var gravity : float = 10
+@export var max_jump_count : int = 5
+var jump_count : int = 5
 
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
-@export var double_jump : = false
+@export var double_jump : = true
 
 var is_grounded : bool = false
 
@@ -51,7 +51,7 @@ func handle_jumping():
 			jump()
 		elif double_jump and jump_count > 0:
 			jump()
-			jump_count -= 1
+			jump_count -= 5
 
 # Player jump
 func jump():
