@@ -414,6 +414,8 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 script = ExtResource("1_qt7d6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3.8146973e-06, 15.999998)
+scale = Vector2(0.3625, 0.3625)
 sprite_frames = SubResource("SpriteFrames_4nss6")
 animation = &"Walk"
 frame_progress = 0.5411892
