@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfidbjdml5nsl"
-path="res://.godot/imported/eyes_close.png-dc9e01223ce52d8e7eb1a381b10409ff.ctex"
+uid="uid://cb0hdmse8mglj"
+path="res://.godot/imported/SwordMan08 [Run].png-74e6ffa4eef16b64abe52a54e8e8d842.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Adobe Stuff/BURLY_MAN_SM/[ size down to 50% ]/eyes_close.png"
-dest_files=["res://.godot/imported/eyes_close.png-dc9e01223ce52d8e7eb1a381b10409ff.ctex"]
+source_file="res://Assets/Adobe Stuff/BURLY_MAN_SM/Sprite Sheet/SwordMan08 [Run].png"
+dest_files=["res://.godot/imported/SwordMan08 [Run].png-74e6ffa4eef16b64abe52a54e8e8d842.ctex"]
 
 [params]
 
