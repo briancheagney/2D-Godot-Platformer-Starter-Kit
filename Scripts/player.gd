@@ -66,7 +66,7 @@ func player_animations():
 	if is_on_floor():
 		if abs(velocity.x) > 0:
 			particle_trails.emitting = true
-			player_sprite.play("Walk", 1.5)
+			player_sprite.play("SwordMan_Running", 1.5)
 		else:
 			player_sprite.play("Idle")
 	else:
@@ -74,9 +74,9 @@ func player_animations():
 
 # Flip player sprite based on X velocity
 func flip_player():
-	if velocity.x < 0: 
+	if velocity.x > 0: 
 		player_sprite.flip_h = true
-	elif velocity.x > 0:
+	elif velocity.x < 0:
 		player_sprite.flip_h = false
 
 # Tween Animations
