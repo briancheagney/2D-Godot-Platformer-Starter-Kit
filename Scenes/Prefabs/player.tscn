@@ -98,6 +98,11 @@ animations = [{
 "name": &"Jump",
 "speed": 7.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mhr4y")
@@ -142,7 +147,7 @@ script = ExtResource("1_qt7d6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4nss6")
-animation = &"Walk"
+animation = &"Run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 31)
