@@ -75,9 +75,9 @@ func player_animations():
 # Flip player sprite based on X velocity
 func flip_player():
 	if velocity.x < 0: 
-		player_sprite.flip_h = true
-	elif velocity.x > 0:
 		player_sprite.flip_h = false
+	elif velocity.x > 0:
+		player_sprite.flip_h = true
 
 # Tween Animations
 func death_tween():
