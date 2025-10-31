@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs2ej1v3msdej"
-path="res://.godot/imported/Cowboy_Walk Cycle01.png-8063ecaf9ba1dc84ebb46ff716d5620c.ctex"
+uid="uid://ctpt14lu8kuqe"
+path="res://.godot/imported/R_Thigh_wear.png-810557afdfd8a72c8e431b261569c73f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheet/Cowboy_Walk Cycle01.png"
-dest_files=["res://.godot/imported/Cowboy_Walk Cycle01.png-8063ecaf9ba1dc84ebb46ff716d5620c.ctex"]
+source_file="res://Assets/Adobe Stuff/BURLY_MAN_SM/[ size down to 50% ]/R_Thigh_wear.png"
+dest_files=["res://.godot/imported/R_Thigh_wear.png-810557afdfd8a72c8e431b261569c73f.ctex"]
 
 [params]
 
