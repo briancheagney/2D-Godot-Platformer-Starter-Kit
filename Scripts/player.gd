@@ -66,7 +66,7 @@ func player_animations():
 	if is_on_floor():
 		if abs(velocity.x) > 0:
 			particle_trails.emitting = true
-			player_sprite.play("Walk", 1.5)
+			player_sprite.play("final run", 1.5)
 		else:
 			player_sprite.play("Idle")
 	else:
