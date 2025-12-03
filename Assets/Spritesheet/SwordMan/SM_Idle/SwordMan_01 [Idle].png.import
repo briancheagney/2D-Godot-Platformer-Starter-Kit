@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl3r7dc642e6y"
-path="res://.godot/imported/Robot Character.png-6ea8d675ffa52c8d7582b331d3d6b589.ctex"
+uid="uid://bevoledtegl53"
+path="res://.godot/imported/SwordMan_01 [Idle].png-340c02249a619f9ff3267221695b8faa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheet/Robot Character.png"
-dest_files=["res://.godot/imported/Robot Character.png-6ea8d675ffa52c8d7582b331d3d6b589.ctex"]
+source_file="res://Assets/Spritesheet/SwordMan/SM_Idle/SwordMan_01 [Idle].png"
+dest_files=["res://.godot/imported/SwordMan_01 [Idle].png-340c02249a619f9ff3267221695b8faa.ctex"]
 
 [params]
 
