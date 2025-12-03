@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyifygf04hwxe"
-path="res://.godot/imported/sprite-3-3.png-345e30f046df50f8b3cf3dd0341708e8.ctex"
+uid="uid://c1wv5b42430jf"
+path="res://.godot/imported/Full Body Parts.jpg-74530d8aacf2a595fe0fe525e4364b90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheet/SwordMan/SwordMan Running/sprite-3-3.png"
-dest_files=["res://.godot/imported/sprite-3-3.png-345e30f046df50f8b3cf3dd0341708e8.ctex"]
+source_file="res://Assets/Adobe Stuff/BURLY_MAN_SM/GIFs/Full Body Parts.jpg"
+dest_files=["res://.godot/imported/Full Body Parts.jpg-74530d8aacf2a595fe0fe525e4364b90.ctex"]
 
 [params]
 

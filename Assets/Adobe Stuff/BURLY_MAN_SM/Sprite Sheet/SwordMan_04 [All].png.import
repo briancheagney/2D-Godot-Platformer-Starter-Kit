@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyifygf04hwxe"
-path="res://.godot/imported/sprite-3-3.png-345e30f046df50f8b3cf3dd0341708e8.ctex"
+uid="uid://bbw3taobqebal"
+path="res://.godot/imported/SwordMan_04 [All].png-629d0abde5f05b6b9c1dd2682ed5a67b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheet/SwordMan/SwordMan Running/sprite-3-3.png"
-dest_files=["res://.godot/imported/sprite-3-3.png-345e30f046df50f8b3cf3dd0341708e8.ctex"]
+source_file="res://Assets/Adobe Stuff/BURLY_MAN_SM/Sprite Sheet/SwordMan_04 [All].png"
+dest_files=["res://.godot/imported/SwordMan_04 [All].png-629d0abde5f05b6b9c1dd2682ed5a67b.ctex"]
 
 [params]
 

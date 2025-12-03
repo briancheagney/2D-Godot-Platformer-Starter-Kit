@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @export_category("Player Properties") # You can tweak these changes according to your likings
 @export var move_speed : float = 400
-@export var jump_force : float = 600
+@export var jump_force : float = 1200
 @export var gravity : float = 30
 @export var max_jump_count : int = 2
 var jump_count : int = 2
@@ -56,7 +56,7 @@ func handle_jumping():
 # Player jump
 func jump():
 	jump_tween()
-	AudioManager.jump_sfx.play()
+	#AudioManager.jump_sfx.play()
 	velocity.y = -jump_force
 
 # Handle Player Animations
@@ -70,7 +70,7 @@ func player_animations():
 		else:
 			player_sprite.play("Idle")
 	else:
-		player_sprite.play("Jump")
+		player_sprite.play("SM_Jump")
 
 # Flip player sprite based on X velocity
 func flip_player():

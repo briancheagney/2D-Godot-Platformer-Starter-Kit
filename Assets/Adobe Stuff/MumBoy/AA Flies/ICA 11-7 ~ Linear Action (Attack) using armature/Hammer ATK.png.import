@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyifygf04hwxe"
-path="res://.godot/imported/sprite-3-3.png-345e30f046df50f8b3cf3dd0341708e8.ctex"
+uid="uid://y0nnqtdm2vv6"
+path="res://.godot/imported/Hammer ATK.png-5f01bfd776594b97bd5b5c3e6ee2738b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheet/SwordMan/SwordMan Running/sprite-3-3.png"
-dest_files=["res://.godot/imported/sprite-3-3.png-345e30f046df50f8b3cf3dd0341708e8.ctex"]
+source_file="res://Assets/Adobe Stuff/MumBoy/AA Flies/ICA 11-7 ~ Linear Action (Attack) using armature/Hammer ATK.png"
+dest_files=["res://.godot/imported/Hammer ATK.png-5f01bfd776594b97bd5b5c3e6ee2738b.ctex"]
 
 [params]
 
