@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5trfiwcy6y7b"]
+
+[ext_resource type="Texture2D" uid="uid://dbyp2ajlqpbjw" path="res://Assets/DgrossFinalAnim/DgrossProjectile/Bullet2.png" id="1_lv6yw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lv6yw"]
+radius = 23.0
+height = 88.0
+
+[node name="Bullet2" type="CharacterBody2D"]
+
+[node name="Bullet2" type="Sprite2D" parent="."]
+texture = ExtResource("1_lv6yw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_lv6yw")
