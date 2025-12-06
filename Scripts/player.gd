@@ -66,11 +66,11 @@ func player_animations():
 	if is_on_floor():
 		if abs(velocity.x) > 0:
 			particle_trails.emitting = true
-			player_sprite.play("SM_Run_02", 1.5)
+			player_sprite.play("SM_Run_01 [Normal]", 1.5)
 		else:
-			player_sprite.play("SM_Idle_01")
+			player_sprite.play("SM_Idle_02")
 	else:
-		player_sprite.play("SM_Jump_02")
+		player_sprite.play("SM_Jump_03")
 
 # Flip player sprite based on X velocity
 func flip_player():
