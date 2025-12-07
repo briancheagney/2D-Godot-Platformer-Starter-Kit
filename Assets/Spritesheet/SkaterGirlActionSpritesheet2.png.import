@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be5c2ab025uih"
-path="res://.godot/imported/SkaterGirl_Spritesheet.png-c271593099c10ec4d99291e15a782e04.ctex"
+uid="uid://3u068i8j3utn"
+path="res://.godot/imported/SkaterGirlActionSpritesheet2.png-31c3ad95f46a988b1bf8ce606e541b35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheet/SkaterGirl_Spritesheet.png"
-dest_files=["res://.godot/imported/SkaterGirl_Spritesheet.png-c271593099c10ec4d99291e15a782e04.ctex"]
+source_file="res://Assets/Spritesheet/SkaterGirlActionSpritesheet2.png"
+dest_files=["res://.godot/imported/SkaterGirlActionSpritesheet2.png-31c3ad95f46a988b1bf8ce606e541b35.ctex"]
 
 [params]
 

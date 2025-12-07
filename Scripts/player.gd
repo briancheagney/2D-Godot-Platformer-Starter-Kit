@@ -58,6 +58,12 @@ func jump():
 	jump_tween()
 	AudioManager.jump_sfx.play()
 	velocity.y = -jump_force
+	
+# Player Action
+#func action():
+	#if is_on_floor():
+		#if 
+			#player_sprite.play("Action")
 
 # Handle Player Animations
 func player_animations():
