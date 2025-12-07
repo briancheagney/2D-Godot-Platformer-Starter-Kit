@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://Scenes/Prefabs/LevelFinishDoor.tscn" id="1_oqkjg"]
 [ext_resource type="PackedScene" uid="uid://bjb3dx2x4bocm" path="res://Scenes/Levels/Level_02.tscn" id="2_0ac5u"]
-[ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://Scenes/Prefabs/player.tscn" id="2_pay8t"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/Coin.tscn" id="3_rrh80"]
 [ext_resource type="Script" uid="uid://bexoiwthdiop3" path="res://Scripts/GameManager.gd" id="4_vgfkr"]
 [ext_resource type="Texture2D" uid="uid://jaegp53ccc7w" path="res://Assets/Spritesheet/platformPack_tilesheet.png" id="5_wqbaa"]
 [ext_resource type="Script" uid="uid://cmhpnjekaqxjt" path="res://Scripts/GameUI.gd" id="6_66mfc"]
 [ext_resource type="Texture2D" uid="uid://clreg520jah1j" path="res://Assets/platformPack_item008.png" id="7_j7jun"]
 [ext_resource type="FontFile" uid="uid://qgc4vi5osk7v" path="res://Assets/Fonts/Star Choco.ttf" id="8_gwcy2"]
+[ext_resource type="PackedScene" uid="uid://23bhvwpx76qw" path="res://Scenes/Blobby.tscn" id="9_3cagf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
 texture = ExtResource("5_wqbaa")
@@ -49,25 +49,6 @@ sources/0 = SubResource("TileSetAtlasSource_rndpx")
 z_index = 1
 position = Vector2(1304, 400)
 next_scene = ExtResource("2_0ac5u")
-
-[node name="Player" parent="." instance=ExtResource("2_pay8t")]
-z_index = 1
-position = Vector2(150, 318)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(16, 36)
-limit_left = 0
-limit_bottom = 705
-limit_smoothed = true
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.4
-drag_top_margin = 0.4
-drag_right_margin = 0.4
-drag_bottom_margin = 0.4
-editor_draw_limits = true
-editor_draw_drag_margin = true
 
 [node name="Coins" type="Node2D" parent="."]
 
@@ -168,3 +149,8 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("8_gwcy2")
 theme_override_font_sizes/font_size = 32
 text = "x 3"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("9_3cagf")]
+position = Vector2(155, 302)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
