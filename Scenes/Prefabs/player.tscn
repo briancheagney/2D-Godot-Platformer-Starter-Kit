@@ -446,13 +446,13 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_qt7d6")
+max_jump_count = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-15.75001, -240.75)
 scale = Vector2(0.5842151, 0.5745436)
 sprite_frames = SubResource("SpriteFrames_4nss6")
-animation = &"Walk"
-frame_progress = 0.033585157
+animation = &"Jump"
 speed_scale = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
