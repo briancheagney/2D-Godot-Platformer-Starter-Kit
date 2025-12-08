@@ -274,7 +274,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_8v5ax")
 }],
 "loop": true,
-"name": &"Action",
+"name": &"Attack",
 "speed": 24.0
 }, {
 "frames": [{
@@ -450,7 +450,7 @@ script = ExtResource("1_qt7d6")
 position = Vector2(12.951925, -5.999998)
 scale = Vector2(0.36584878, 0.3257143)
 sprite_frames = SubResource("SpriteFrames_4nss6")
-animation = &"Action"
+animation = &"Attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 15)

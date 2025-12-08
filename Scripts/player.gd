@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @export_category("Player Properties") # You can tweak these changes according to your likings
 @export var move_speed : float = 400
-@export var jump_force : float = 600
+@export var jump_force : float = 300
 @export var gravity : float = 10
 @export var max_jump_count : int = 5
 var jump_count : int = 5
@@ -19,15 +19,29 @@ var is_grounded : bool = false
 @onready var particle_trails = $ParticleTrails
 @onready var death_particles = $DeathParticles
 
+var is_attacking = false
+
 # --------- BUILT-IN FUNCTIONS ---------- #
 
 func _process(_delta):
 	# Calling functions
+	if Input.is_action_just_pressed("Attack") and not is_attacking:
+		start_attack()
+		
 	movement()
 	player_animations()
 	flip_player()
 	
 # --------- CUSTOM FUNCTIONS ---------- #
+
+func start_attack():
+	is_attacking=true
+	player_sprite.play("Attack")
+	# When animation ends, reset attack state
+	player_sprite.animation_finished.connect(self._on_attack_finished, Object.CONNECT_ONE_SHOT)
+
+func _on_attack_finished():
+	is_attacking=false
 
 # <-- Player Movement Code -->
 func movement():
@@ -69,8 +83,6 @@ func player_animations():
 			player_sprite.play("Walk", 1.5)
 		else:
 			player_sprite.play("Idle")
-			if Input.is_action_just_pressed("Action"):
-				player_sprite.play("Action")
 	else:
 		player_sprite.play("Jump")
 
