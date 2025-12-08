@@ -19,17 +19,32 @@ var is_grounded : bool = false
 @onready var particle_trails = $ParticleTrails
 @onready var death_particles = $DeathParticles
 
+var is_attacking = false
+
 # --------- BUILT-IN FUNCTIONS ---------- #
 
 func _process(_delta):
 	# Calling functions
+	if Input.is_action_just_pressed("Attack") and not is_attacking:
+		start_attack()
+		
 	movement()
 	player_animations()
 	flip_player()
+
 	
 # --------- CUSTOM FUNCTIONS ---------- #
 
 # <-- Player Movement Code -->
+func start_attack():
+	is_attacking=true
+	player_sprite.play("Attack")
+	#when anim ends, reset attack state
+	player_sprite.animation_finished.connect(self._on_attack_finished, Object.CONNECT_ONE_SHOT)
+	
+func _on_attack_finished():
+	is_attacking=false
+	
 func movement():
 	# Gravity
 	if !is_on_floor():
@@ -61,6 +76,12 @@ func jump():
 
 # Handle Player Animations
 func player_animations():
+	
+# if attacking, override everything else
+	if is_attacking:
+		player_sprite.play("Attack")
+		return
+	
 	particle_trails.emitting = false
 	
 	if is_on_floor():
