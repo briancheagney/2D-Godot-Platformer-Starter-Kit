@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clnok6h0axegl"
-path="res://.godot/imported/platformPack_tile048.png-18e2e5edfd0d4e70510ccb5281217cef.ctex"
+uid="uid://ck3ld4sknxxka"
+path="res://.godot/imported/H2BroJump.png-7f8bf8c8a225f9b4c5b510b25132d899.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/platformPack_tile048.png"
-dest_files=["res://.godot/imported/platformPack_tile048.png-18e2e5edfd0d4e70510ccb5281217cef.ctex"]
+source_file="res://Assets/Spritesheet/H2BroJump.png"
+dest_files=["res://.godot/imported/H2BroJump.png-7f8bf8c8a225f9b4c5b510b25132d899.ctex"]
 
 [params]
 

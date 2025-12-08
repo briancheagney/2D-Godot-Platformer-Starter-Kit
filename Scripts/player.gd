@@ -4,8 +4,8 @@ extends CharacterBody2D
 
 @export_category("Player Properties") # You can tweak these changes according to your likings
 @export var move_speed : float = 400
-@export var jump_force : float = 600
-@export var gravity : float = 30
+@export var jump_force : float = 800
+@export var gravity : float = 15
 @export var max_jump_count : int = 2
 var jump_count : int = 2
 
@@ -66,7 +66,7 @@ func player_animations():
 	if is_on_floor():
 		if abs(velocity.x) > 0:
 			particle_trails.emitting = true
-			player_sprite.play("Walk", 1.5)
+			player_sprite.play("Run", 1.5)
 		else:
 			player_sprite.play("Idle")
 	else:
@@ -82,7 +82,7 @@ func flip_player():
 # Tween Animations
 func death_tween():
 	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
+	tween.tween_property(self, "scale", Vector2.ZERO, 0.005)
 	await tween.finished
 	global_position = spawn_point.global_position
 	await get_tree().create_timer(0.3).timeout
