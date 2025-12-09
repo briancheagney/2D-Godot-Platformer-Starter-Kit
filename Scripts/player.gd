@@ -1,33 +1,44 @@
 extends CharacterBody2D
-
 # --------- VARIABLES ---------- #
-
-@export_category("Player Properties") # You can tweak these changes according to your likings
+@export_category("Player Properties")
 @export var move_speed : float = 400
 @export var jump_force : float = 600
 @export var gravity : float = 30
 @export var max_jump_count : int = 2
 var jump_count : int = 2
-
-@export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
+@export_category("Toggle Functions")
 @export var double_jump : = false
-
 var is_grounded : bool = false
-
+var is_attacking : bool = false  # NEW: Track if player is attacking
 @onready var player_sprite = $AnimatedSprite2D
 @onready var spawn_point = %SpawnPoint
 @onready var particle_trails = $ParticleTrails
 @onready var death_particles = $DeathParticles
+@onready var animation_player = $AnimationPlayer
 
 # --------- BUILT-IN FUNCTIONS ---------- #
-
 func _process(_delta):
 	# Calling functions
 	movement()
 	player_animations()
 	flip_player()
-	
+	handle_attack()  # NEW: Check for attack input
+
 # --------- CUSTOM FUNCTIONS ---------- #
+# NEW: Handle attack input
+func handle_attack():
+	if Input.is_action_just_pressed("Attack") and !is_attacking:
+		perform_attack()
+
+# NEW: Perform attack animation
+func perform_attack():
+	is_attacking = true
+	player_sprite.play("Attack")  # Make sure you have an "Attack" animation in your AnimatedSprite2D
+	# If you want to use AnimationPlayer instead, use: animation_player.play("attack")
+	
+	# Wait for animation to finish
+	await player_sprite.animation_finished
+	is_attacking = false
 
 # <-- Player Movement Code -->
 func movement():
@@ -44,7 +55,7 @@ func movement():
 	velocity = Vector2(inputAxis * move_speed, velocity.y)
 	move_and_slide()
 
-# Handles jumping functionality (double jump or single jump, can be toggled from inspector)
+# Handles jumping functionality
 func handle_jumping():
 	if Input.is_action_just_pressed("Jump"):
 		if is_on_floor() and !double_jump:
@@ -61,6 +72,10 @@ func jump():
 
 # Handle Player Animations
 func player_animations():
+	# Don't change animation if attacking
+	if is_attacking:
+		return
+		
 	particle_trails.emitting = false
 	
 	if is_on_floor():
@@ -100,8 +115,6 @@ func jump_tween():
 	tween.tween_property(self, "scale", Vector2.ONE, 0.1)
 
 # --------- SIGNALS ---------- #
-
-# Reset the player's position to the current level spawn point if collided with any trap
 func _on_collision_body_entered(_body):
 	if _body.is_in_group("Traps"):
 		AudioManager.death_sfx.play()
