@@ -9,6 +9,7 @@ extends CharacterBody2D
 @export var max_jump_count : int = 2
 var jump_count : int = 2
 
+
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
 @export var double_jump : = false
 
@@ -26,6 +27,7 @@ func _process(_delta):
 	movement()
 	player_animations()
 	flip_player()
+	attack()
 	
 # --------- CUSTOM FUNCTIONS ---------- #
 
@@ -58,6 +60,10 @@ func jump():
 	jump_tween()
 	AudioManager.jump_sfx.play()
 	velocity.y = -jump_force
+
+func attack ():
+	if Input.is_action_just_pressed("Attack"):
+		player_sprite.play("Attack")
 
 # Handle Player Animations
 func player_animations():
