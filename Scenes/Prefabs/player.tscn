@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://w7m6tehvvy3g"]
+[gd_scene load_steps=38 format=3 uid="uid://w7m6tehvvy3g"]
 
 [ext_resource type="Script" uid="uid://by1niu0p84xve" path="res://Scripts/player.gd" id="1_qt7d6"]
 [ext_resource type="Texture2D" uid="uid://dakpoa3vgxx7d" path="res://Assets/attackjump/Final_Attack_+jump-1.png" id="2_imxsi"]
@@ -22,6 +22,16 @@
 [ext_resource type="Texture2D" uid="uid://b21lubaf0l8mr" path="res://Assets/attackjump/Final_Attack_+jump-10.png" id="11_4d5ba"]
 [ext_resource type="Texture2D" uid="uid://b520v1yrirbif" path="res://Assets/attackjump/Final_Attack_+jump-11.png" id="12_o0o8v"]
 [ext_resource type="Texture2D" uid="uid://c8bd8icuxud" path="res://Assets/attackjump/Final_Attack_+jump-12.png" id="13_0qfkv"]
+[ext_resource type="Texture2D" uid="uid://b2k5iaswjuvrn" path="res://Assets/Idle/Idle-1.png" id="14_o0o8v"]
+[ext_resource type="Texture2D" uid="uid://bslxydaqhwnkv" path="res://Assets/Idle/Idle-2.png" id="15_0qfkv"]
+[ext_resource type="Texture2D" uid="uid://7rmes5v44yat" path="res://Assets/Idle/Idle-3.png" id="16_r1wtp"]
+[ext_resource type="Texture2D" uid="uid://c7brmk6py1u3l" path="res://Assets/Idle/Idle-4.png" id="17_shwlg"]
+[ext_resource type="Texture2D" uid="uid://dx3ai0dkyeab5" path="res://Assets/Idle/Idle-5.png" id="18_i64xu"]
+[ext_resource type="Texture2D" uid="uid://cxdb6eskqdlkq" path="res://Assets/Idle/Idle-6.png" id="19_f68l1"]
+[ext_resource type="Texture2D" uid="uid://bjkq7v6pu068w" path="res://Assets/Idle/Idle-7.png" id="20_25cvw"]
+[ext_resource type="Texture2D" uid="uid://ca586oveo4ll0" path="res://Assets/Idle/Idle-8.png" id="21_jih6h"]
+[ext_resource type="Texture2D" uid="uid://pf826clr27rp" path="res://Assets/Idle/Idle-9.png" id="22_d7fun"]
+[ext_resource type="Texture2D" uid="uid://srj0yp3pm3sc" path="res://Assets/Idle/Idle-10.png" id="23_4euai"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4nss6"]
 animations = [{
@@ -64,9 +74,39 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attackjump",
-"speed": 11.0
+"speed": 9.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_o0o8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0qfkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_r1wtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_shwlg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_i64xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_f68l1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_25cvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jih6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_d7fun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4euai")
+}],
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
@@ -98,7 +138,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Punkwalk",
-"speed": 7.0
+"speed": 6.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4sts"]
@@ -120,10 +160,12 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 script = ExtResource("1_qt7d6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(60.343758, -48.73437)
-scale = Vector2(0.112995416, 0.103614934)
+position = Vector2(50, -54)
+scale = Vector2(0.12174161, 0.10858712)
 sprite_frames = SubResource("SpriteFrames_4nss6")
-animation = &"Punkwalk"
+animation = &"Attackjump"
+frame = 11
+frame_progress = 0.17091121
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 15)
